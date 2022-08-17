@@ -82,7 +82,8 @@ if (!isset($_SESSION['nama'])) {
                     <div class="form-group row mb-3">
                         <label for="alamat" class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-10">
-                            <input type="submit" name="tombol_tambah" class="btn btn-primary" value="Tambah">
+                            <input type="submit" name="tombol_tambah" class="btn btn-success" value="Tambah">
+                            <input type="reset" name="tombol_reset" class="btn btn-secondary" value="Reset">
                         </div>
                     </div>
                 </form>

@@ -85,7 +85,7 @@ if (!isset($_SESSION['nama'])) {
                     <td>".$row['harga']."</td>
                     <td>
                     <a class='btn btn-info' href='form_edit.php?id_barang=".$row['id_barang']."'>Update</a>
-                    <a class='btn btn-danger' href='index.php?id_barang=".$row['id_barang']."'>Hapus</a>
+                    <a class='btn btn-danger' href='barang.php?id_barang=".$row['id_barang']."'>Hapus</a>
                     </td>
                     </tr>";
                     $nom++;
