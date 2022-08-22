@@ -10,23 +10,6 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-lg bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="image/logo.png" alt="" width="36" height="30" class="d-inline-block align-text-center ">
-                SIKAT (Sistem Informasi Kios Anang Tani)
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <ul class="nav nav-tabs justify-content-end">
-                <a class="btn btn-light" href="login.php">Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
 
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
@@ -49,9 +32,55 @@
         </div>
     </nav>
 
-    <marquee behavior="alternate" direction="right">Masih dalam tahap pembuatan. :)</marquee>
 
-    <h3>Ini halaman utama</h3>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/satu.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/dua.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/tiga.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="card">
+        <div class="container  mb-3">
+            <p class="fs-3">Tentang Kios Anang Tani</p>
+            <p class="text-sm-start">Kios Anang Tani berada di Desa Sukasari Blok Dongkal, Kec.Arahan, Kab.Indramayu.
+                Kios ini menjual insektisida, fungsisida, nutrisi, dan perlengkapan pertanian lainnya seperti sparepart
+                tangki semprot, tali pengusir burung, sepatu sawah anti keong, serta ada juga rokok. Yang dijual disini
+                pasti lebih murah dan dijamin produk asli.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <small>Copyright &copy; 2022 - Lukman Hakim . All Rights Reserved.</small>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

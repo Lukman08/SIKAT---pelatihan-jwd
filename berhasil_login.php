@@ -16,7 +16,7 @@ if (!isset($_SESSION['nama'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <title>Home</title>
+    <title>SIKAT (Sistem Informasi Kios Anang Tani)</title>
 </head>
 
 <body>
@@ -79,21 +79,9 @@ if (!isset($_SESSION['nama'])) {
         <h3>Selamat datang <?php echo $_SESSION['nama']; ?>,</h3>
     </div>
 
-    <div class="row mt-5">
+    <div class="row mt-5 justify-content-center ">
 
-        <div class="col-md-1 col-sm-12 mb-3">
-            <!-- <div class="card" style="width: 6cm;">
-                <img src="image/barang.svg" class="card-img-top" alt="...">
-
-                <div class="card-body">
-                    <h3 class="card-title"><?php echo $jumlah_barang?></h3>
-                    <p class="card-text">Data Barang</p>
-                </div>
-                <a href="barang.php" class="btn btn-primary">Lihat</a>
-            </div> -->
-        </div>
-
-        <div class="col-md-2 col-sm-12 mb-3">
+        <div class="col-md-3 col-sm-12 mb-5">
             <div class="card" style="width: 6cm;">
                 <img src="image/akun.svg" class="card-img-top" alt="...">
 
@@ -105,7 +93,7 @@ if (!isset($_SESSION['nama'])) {
             </div>
         </div>
 
-        <div class="col-md-2 col-sm-12 mb-3">
+        <div class="col-md-3 col-sm-12 mb-5">
             <div class="card" style="width: 6cm;">
                 <img src="image/barang.svg" class="card-img-top" alt="...">
 
@@ -117,6 +105,11 @@ if (!isset($_SESSION['nama'])) {
             </div>
         </div>
 
+        <footer>
+            <div class="container">
+                <small>Copyright &copy; 2022 - Lukman Hakim . All Rights Reserved.</small>
+            </div>
+        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">

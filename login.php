@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['nama'] = $row['nama'];
-        header("Location: barang.php");
+        header("Location: berhasil_login.php");
     } else {
         echo "<script>alert('Username atau password Anda salah. Silahkan coba lagi!')</script>";
     }
@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
 
     <link rel="stylesheet" type="text/css" href="css/login.css">
 
-    <title>Login</title>
+    <title>SIKAT (Sistem Informasi Kios Anang Tani)</title>
 </head>
 
 <body>

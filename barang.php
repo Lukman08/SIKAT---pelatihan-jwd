@@ -16,7 +16,7 @@ if (!isset($_SESSION['nama'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <title>Data Barang</title>
+    <title>SIKAT (Sistem Informasi Kios Anang Tani)</title>
 </head>
 
 <body>
@@ -63,7 +63,7 @@ if (!isset($_SESSION['nama'])) {
         <h1>Data Barang</h1>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <a class="btn btn-outline-success" href="tambahbarang.php">Tambah <svg xmlns="http://www.w3.org/2000/svg"
                 width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -111,6 +111,11 @@ if (!isset($_SESSION['nama'])) {
         </table>
     </div>
 
+    <footer>
+        <div class="container">
+            <small>Copyright &copy; 2022 - Lukman Hakim . All Rights Reserved.</small>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
