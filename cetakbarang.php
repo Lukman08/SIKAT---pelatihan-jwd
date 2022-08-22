@@ -10,38 +10,39 @@
 </head>
 
 <body>
-	<h5>.</h5>
-	<h1 class="text-center">DATA BARANG</h1>
-	<h2 class="text-center">KIOS ANANG TANI</h2>
-	<h5>.</h5>
+	<div class="container mt-5">
+		<h1 class="text-center">DATA BARANG</h1>
+		<h2 class="text-center">KIOS ANANG TANI</h2>
+	</div>
 	<?php 
 	include 'config.php';
 	?>
-
-	<table class="table table-bordered table-striped">
-		<tr>
-			<th>#</th>
-			<th>ID</th>
-			<th>Nama</th>
-			<th>Ukuran</th>
-			<th>Harga</th>
-		</tr>
-		<?php 
+	<div class="container mt-3">
+		<table class="table table-bordered table-striped">
+			<tr>
+				<th>#</th>
+				<th>ID</th>
+				<th>Nama</th>
+				<th>Ukuran</th>
+				<th>Harga</th>
+			</tr>
+			<?php 
 		$no = 1;
 		$sql = mysqli_query($conn,"select * from barang");
 		while($data = mysqli_fetch_array($sql)){
 		?>
-		<tr>
-			<td><?php echo $no++; ?></td>
-			<td><?php echo $data['id_barang'] ?></td>
-			<td><?php echo $data['nama_barang'] ?></td>
-			<td><?php echo $data['ukuran'] ?></td>
-			<td><?php echo $data['harga'] ?></td>
-		</tr>
-		<?php 
+			<tr>
+				<td><?php echo $no++; ?></td>
+				<td><?php echo $data['id_barang'] ?></td>
+				<td><?php echo $data['nama_barang'] ?></td>
+				<td><?php echo $data['ukuran'] ?></td>
+				<td><?php echo $data['harga'] ?></td>
+			</tr>
+			<?php 
 		}
 		?>
-	</table>
+		</table>
+	</div>
 
 	<footer>
 		<div class="container">
