@@ -1,11 +1,14 @@
 <?php 
- 
 session_start();
- 
 if (!isset($_SESSION['nama'])) {
     header("Location: login.php");
 }
- 
+
+include 'config.php';
+$id = $_GET['id_barang'];
+$barang = mysqli_query($conn, "select * from barang where id_barang='$id'");
+$row = mysqli_fetch_array($barang);
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +19,7 @@ if (!isset($_SESSION['nama'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <title>Data Barang</title>
+    <title>Tambah Barang</title>
 </head>
 
 <body>
@@ -59,52 +62,52 @@ if (!isset($_SESSION['nama'])) {
         </div>
     </nav>
 
-    <div class="container mt-3">
-        <h1>Data Barang</h1>
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h3>Update Data Barang</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" action="updatebrng.php">
+                    <div class="form-group row mb-3">
+                        <label for="id_barang" class="col-sm-2 col-form-label">ID Barang</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?php echo $id; ?>" name="id_barang" class="form-control"
+                                id="id_barang">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="nama_barang" class="col-sm-2 col-form-label">Nama Barang</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?php echo $row['nama_barang']; ?>" name="nama_barang"
+                                class="form-control" id="nama_barang">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="ukuran" class="col-sm-2 col-form-label">Ukuran</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?php echo $row['ukuran']; ?>" name="ukuran" class="form-control"
+                                id="ukuran">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="harga" class="col-sm-2 col-form-label">Harga</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?php echo $row['harga']; ?>" name="harga" class="form-control"
+                                id="harga">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="alamat" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input type="submit" name="tombol_tambah" class="btn btn-primary" value="Update">
+                            <input type="reset" name="tombol_reset" class="btn btn-secondary" value="Reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <div class="container mt-5">
-        <a class="btn btn-outline-success" href="tambahbarang.php">Tambah <svg xmlns="http://www.w3.org/2000/svg"
-                width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-            </svg></a>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Ukuran</th>
-                    <th scope="col">Harga</th>
-                    <th scope="col">Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                include 'config.php';
-                $barang = mysqli_query($conn,"SELECT * from barang");
-                $nom=1;
-                foreach ($barang as $row){
-                    echo"<tr>
-                    <td>$nom</td>
-                    <td>".$row['id_barang']."</td>
-                    <td>".$row['nama_barang']."</td>
-                    <td>".$row['ukuran']."</td>
-                    <td>".$row['harga']."</td>
-                    <td>
-                    <a class='btn btn-info' href='formeditb.php?id_barang=".$row['id_barang']."'>Update</a>
-                    <a class='btn btn-danger' href='hapusbrng.php?id_barang=".$row['id_barang']."' onClick=\"return confirm('Yakin ingin menghapus data ini?');\">Hapus</a>
-                    </td>
-                    </tr>";
-                    $nom++;
-                }
-                ?>
-            </tbody>
-        </table>
-    </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
